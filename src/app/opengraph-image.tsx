@@ -8,8 +8,8 @@ import { DATA } from "@/data/resume";
 export const runtime = "nodejs";
 export const alt = `${DATA.name} | Full Stack Developer`;
 export const size = {
-  width: 1200,
-  height: 630,
+  width: 2400,
+  height: 1260,
 };
 export const contentType = "image/png";
 
@@ -42,6 +42,18 @@ export default async function Image() {
     console.error("Failed to load avatar for OG:", e);
   }
 
+  // 3. Load authentic Georgia Bold Italic font matching the portfolio website
+  let georgiaFont: Buffer | null = null;
+  try {
+    const fontPath = path.join(process.cwd(), "src/assets/fonts/Georgia-BoldItalic.ttf");
+    if (fs.existsSync(fontPath)) {
+      georgiaFont = fs.readFileSync(fontPath);
+    }
+  } catch (e) {
+    console.error("Failed to load Georgia font:", e);
+  }
+
+  // 4. Render Retina @2x (2400 x 1260) with signature bold italic serif typography
   return new ImageResponse(
     (
       <div
@@ -53,19 +65,19 @@ export default async function Image() {
           justifyContent: "space-between",
           backgroundColor: "#000000",
           backgroundImage:
-            "radial-gradient(circle at 80% 30%, rgba(59, 130, 246, 0.18) 0%, transparent 48%), radial-gradient(circle at 20% 70%, rgba(148, 163, 184, 0.1) 0%, transparent 50%), radial-gradient(circle at 50% 0%, rgba(30, 41, 59, 0.35) 0%, transparent 60%)",
-          padding: "64px 80px",
+            "radial-gradient(circle at 80% 30%, rgba(59, 130, 246, 0.22) 0%, transparent 50%), radial-gradient(circle at 15% 70%, rgba(148, 163, 184, 0.1) 0%, transparent 50%), radial-gradient(circle at 50% 0%, rgba(30, 41, 59, 0.4) 0%, transparent 60%)",
+          padding: "128px 160px",
           fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
           position: "relative",
         }}
       >
-        {/* Left Column: Role, Name, Bio, Tech Badges */}
+        {/* Left Column: Role, Headline, Bio, Tech Badges */}
         <div
           style={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            maxWidth: "700px",
+            maxWidth: "1420px",
           }}
         >
           {/* Eyebrow with blue accent line */}
@@ -73,24 +85,24 @@ export default async function Image() {
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "12px",
-              marginBottom: "16px",
+              gap: "24px",
+              marginBottom: "36px",
             }}
           >
             <div
               style={{
-                width: "28px",
-                height: "3px",
+                width: "56px",
+                height: "6px",
                 backgroundColor: "#3b82f6",
-                borderRadius: "2px",
+                borderRadius: "4px",
               }}
             />
             <span
               style={{
-                fontSize: "15px",
+                fontSize: "30px",
                 fontWeight: 700,
                 color: "#60a5fa",
-                letterSpacing: "2.5px",
+                letterSpacing: "5px",
                 textTransform: "uppercase",
               }}
             >
@@ -98,29 +110,50 @@ export default async function Image() {
             </span>
           </div>
 
-          {/* Big Bold Headline */}
+          {/* Signature Headline: "Hi, I'm Shubham" with authentic bold blue italic serif */}
           <div
             style={{
-              fontSize: "78px",
-              fontWeight: 900,
-              color: "#ffffff",
-              lineHeight: 1.05,
-              letterSpacing: "-0.04em",
-              marginBottom: "20px",
+              display: "flex",
+              alignItems: "baseline",
+              gap: "32px",
+              marginBottom: "40px",
             }}
           >
-            Shubham Kumar
+            <span
+              style={{
+                fontSize: "152px",
+                fontWeight: 900,
+                color: "#ffffff",
+                letterSpacing: "-0.04em",
+                lineHeight: 1,
+              }}
+            >
+              Hi, I&apos;m
+            </span>
+            <span
+              style={{
+                fontSize: "180px",
+                fontFamily: "Georgia",
+                fontStyle: "italic",
+                fontWeight: 900,
+                color: "#3b82f6",
+                letterSpacing: "-0.03em",
+                lineHeight: 1,
+              }}
+            >
+              Shubham
+            </span>
           </div>
 
           {/* Bio statement */}
           <div
             style={{
-              fontSize: "23px",
+              fontSize: "44px",
               fontWeight: 400,
               color: "#94a3b8",
               lineHeight: 1.45,
-              marginBottom: "32px",
-              maxWidth: "660px",
+              marginBottom: "64px",
+              maxWidth: "1340px",
             }}
           >
             Building clean, fast web apps and scalable cloud architectures that just work.
@@ -131,7 +164,7 @@ export default async function Image() {
             style={{
               display: "flex",
               flexWrap: "wrap",
-              gap: "10px",
+              gap: "20px",
             }}
           >
             {[
@@ -148,12 +181,12 @@ export default async function Image() {
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  padding: "7px 16px",
-                  borderRadius: "8px",
+                  padding: "14px 32px",
+                  borderRadius: "16px",
                   backgroundColor: "rgba(255, 255, 255, 0.05)",
-                  border: "1px solid rgba(255, 255, 255, 0.12)",
+                  border: "2px solid rgba(255, 255, 255, 0.12)",
                   color: "#f1f5f9",
-                  fontSize: "15px",
+                  fontSize: "30px",
                   fontWeight: 600,
                 }}
               >
@@ -163,7 +196,7 @@ export default async function Image() {
           </div>
         </div>
 
-        {/* Right Column: Hero Squircle Portrait Avatar with Moody Lighting */}
+        {/* Right Column: Hero Squircle Portrait Avatar */}
         {avatarBase64 && (
           <div
             style={{
@@ -176,26 +209,26 @@ export default async function Image() {
             <div
               style={{
                 display: "flex",
-                width: "280px",
-                height: "280px",
-                borderRadius: "44px",
-                padding: "6px",
+                width: "560px",
+                height: "560px",
+                borderRadius: "88px",
+                padding: "12px",
                 backgroundColor: "#09090b",
-                border: "2px solid rgba(255, 255, 255, 0.15)",
+                border: "4px solid rgba(255, 255, 255, 0.15)",
                 boxShadow:
-                  "0 30px 70px -15px rgba(0, 0, 0, 1), 0 0 60px rgba(59, 130, 246, 0.2)",
+                  "0 60px 140px -30px rgba(0, 0, 0, 1), 0 0 120px rgba(59, 130, 246, 0.25)",
                 overflow: "hidden",
               }}
             >
               <img
                 src={avatarBase64}
                 alt={DATA.name}
-                width="264"
-                height="264"
+                width="528"
+                height="528"
                 style={{
-                  width: "264px",
-                  height: "264px",
-                  borderRadius: "38px",
+                  width: "528px",
+                  height: "528px",
+                  borderRadius: "76px",
                   objectFit: "cover",
                 }}
               />
@@ -206,13 +239,13 @@ export default async function Image() {
               style={{
                 display: "flex",
                 alignItems: "center",
-                gap: "6px",
-                marginTop: "16px",
-                padding: "6px 16px",
+                gap: "12px",
+                marginTop: "32px",
+                padding: "12px 32px",
                 borderRadius: "9999px",
                 backgroundColor: "rgba(255, 255, 255, 0.04)",
-                border: "1px solid rgba(255, 255, 255, 0.08)",
-                fontSize: "13px",
+                border: "2px solid rgba(255, 255, 255, 0.08)",
+                fontSize: "26px",
                 color: "#94a3b8",
                 fontWeight: 500,
               }}
@@ -225,6 +258,16 @@ export default async function Image() {
     ),
     {
       ...size,
+      fonts: georgiaFont
+        ? [
+            {
+              name: "Georgia",
+              data: georgiaFont,
+              style: "italic",
+              weight: 900,
+            },
+          ]
+        : undefined,
     }
   );
 }

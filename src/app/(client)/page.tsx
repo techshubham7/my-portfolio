@@ -30,8 +30,8 @@ export const metadata = {
     images: [
       {
         url: getOgImageUrl(),
-        width: 1200,
-        height: 630,
+        width: 2400,
+        height: 1260,
         alt: DATA.name + " | Full Stack Developer",
       },
     ],
