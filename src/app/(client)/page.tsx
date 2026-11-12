@@ -13,6 +13,7 @@ import { ContactCTA } from "@/components/contact-cta";
 import SocialLinks from "@/components/social-links";
 import { ArrowRight, Briefcase, GraduationCap, Wrench } from "lucide-react";
 import GitHubCalendarPanel from "@/components/github-calendar";
+import { getOgImageUrl } from "@/lib/og";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -28,10 +29,10 @@ export const metadata = {
     url: DATA.url,
     images: [
       {
-        url: DATA.avatarUrl.startsWith("http")
-          ? DATA.avatarUrl
-          : DATA.url + DATA.avatarUrl,
-        alt: DATA.name,
+        url: getOgImageUrl(),
+        width: 1200,
+        height: 630,
+        alt: DATA.name + " | Full Stack Developer",
       },
     ],
     type: "website",
@@ -40,11 +41,7 @@ export const metadata = {
     card: "summary_large_image",
     title: DATA.name + " | Portfolio",
     description: DATA.summary,
-    images: [
-      DATA.avatarUrl.startsWith("http")
-        ? DATA.avatarUrl
-        : DATA.url + DATA.avatarUrl,
-    ],
+    images: [getOgImageUrl()],
   },
 };
 

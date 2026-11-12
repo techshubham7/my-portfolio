@@ -4,6 +4,7 @@ import { DATA } from "@/data/resume";
 import type { Metadata, Viewport } from "next";
 import StructuredData from "@/components/structured-data";
 import Footer from "@/components/footer";
+import { getOgImageUrl } from "@/lib/og";
 import React from "react";
 
 export const metadata: Metadata = {
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: `${DATA.name}`,
+    title: `${DATA.name} | Full Stack Developer`,
     description: DATA.description,
     url: DATA.url,
     siteName: `${DATA.name}`,
@@ -42,10 +43,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/me.jpeg",
-        width: 800,
-        height: 800,
-        alt: DATA.name,
+        url: getOgImageUrl(),
+        width: 1200,
+        height: 630,
+        alt: `${DATA.name} | Full Stack Developer`,
       },
     ],
   },
@@ -61,11 +62,11 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: `${DATA.name}`,
+    title: `${DATA.name} | Full Stack Developer`,
     card: "summary_large_image",
     creator: "@ShubhamRawat_7",
     description: DATA.description,
-    images: ["/me.jpeg"],
+    images: [getOgImageUrl()],
   },
   verification: {
     google: "9xOKjilHIgxPVMWktiZCP9nNdCWpvA5J6YWrGwBoqHk",
