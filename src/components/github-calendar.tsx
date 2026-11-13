@@ -19,7 +19,7 @@ interface Props {
 }
 
 const DEFAULT_GITHUB_ACCOUNTS: (GitHubAccount | string)[] = [
-  "Shubham071122",
+  "techshubham7",
   "shubham-kumar-acowale",
 ];
 

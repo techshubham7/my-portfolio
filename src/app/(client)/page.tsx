@@ -182,7 +182,7 @@ export default function Page() {
         <BlurFade delay={BLUR_FADE_DELAY * 10.5}>
           <GitHubCalendarPanel
             accounts={[
-              { label: "Personal", username: DATA.contact.social.GitHub.url.split("/").pop() || "Shubham071122" },
+              { label: "Personal", username: DATA.contact.social.GitHub.url.split("/").pop() || "techshubham7" },
               { label: "Work", username: "shubham-kumar-acowale" },
             ]}
             gitlabAccounts={["shubham.kumar-acowale"]}

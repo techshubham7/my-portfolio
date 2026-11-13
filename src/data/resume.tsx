@@ -64,7 +64,7 @@ export const DATA = {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://github.com/Shubham071122",
+        url: "https://github.com/techshubham7",
         icon: Icons.github,
 
         navbar: true,
@@ -78,7 +78,7 @@ export const DATA = {
       },
       X: {
         name: "X",
-        url: "https://x.com/ShubhamRawat_7",
+        url: "https://x.com/techshubham7",
         icon: Icons.x,
 
         navbar: true,
@@ -198,7 +198,7 @@ export const DATA = {
   projects: [
     {
       title: "pgcaliper",
-      href: "https://github.com/Shubham071122/pgcaliper",
+      href: "https://github.com/techshubham7/pgcaliper",
       dates: "Oct 2026 - Present",
       active: true,
       description:
@@ -243,12 +243,12 @@ Go 1.22+, PostgreSQL 12+, pgx/v5, System Catalogs, Multi-Tenancy Architecture, D
       links: [
         {
           type: "Source",
-          href: "https://github.com/Shubham071122/pgcaliper",
+          href: "https://github.com/techshubham7/pgcaliper",
           icon: <Icons.github className="size-3" />,
         },
         {
           type: "Releases",
-          href: "https://github.com/Shubham071122/pgcaliper/releases",
+          href: "https://github.com/techshubham7/pgcaliper/releases",
           icon: <Icons.globe className="size-3" />,
         },
       ],
@@ -308,12 +308,12 @@ Next.js, TypeScript, Go, Gin, PostgreSQL, Razorpay, Webhooks, WebSocket, tldraw,
         },
         {
           type: "FE",
-          href: "https://github.com/Shubham071122/collab-fe",
+          href: "https://github.com/techshubham7/collab-fe",
           icon: <Icons.github className="size-3" />,
         },
         {
           type: "BE",
-          href: "https://github.com/Shubham071122/collab",
+          href: "https://github.com/techshubham7/collab",
           icon: <Icons.github className="size-3" />,
         },
       ],
@@ -369,12 +369,12 @@ Node.js, TypeScript, Fastify, PostgreSQL, Supabase, Prisma, pgvector, Redis, Bul
         // },
         {
           type: "FE",
-          href: "https://github.com/Shubham071122/apnavakil-fe",
+          href: "https://github.com/techshubham7/apnavakil-fe",
           icon: <Icons.github className="size-3" />,
         },
         {
           type: "BE",
-          href: "https://github.com/Shubham071122/apnavakil-be",
+          href: "https://github.com/techshubham7/apnavakil-be",
           icon: <Icons.github className="size-3" />,
         },
       ],
@@ -421,12 +421,12 @@ Next.js, TypeScript, Node.js, Python FastAPI, Google Gemini, Mongo Vector DB, RA
         },
         {
           type: "FE",
-          href: "https://github.com/Shubham071122/ai-agent-fe",
+          href: "https://github.com/techshubham7/ai-agent-fe",
           icon: <Icons.github className="size-3" />,
         },
         {
           type: "BE",
-          href: "https://github.com/Shubham071122/ai-agent-be",
+          href: "https://github.com/techshubham7/ai-agent-be",
           icon: <Icons.github className="size-3" />,
         },
       ],
@@ -472,12 +472,12 @@ React, JavaScript, Node.js, MongoDB, Redis, TailwindCSS`,
         // },
         {
           type: "FE",
-          href: "https://github.com/Shubham071122/canechatclient",
+          href: "https://github.com/techshubham7/canechatclient",
           icon: <Icons.github className="size-3" />,
         },
         {
           type: "BE",
-          href: "https://github.com/Shubham071122/canechat-server",
+          href: "https://github.com/techshubham7/canechat-server",
           icon: <Icons.github className="size-3" />,
         },
       ],
@@ -524,12 +524,12 @@ React, JavaScript, Node.js, Express.js, MongoDB, TailwindCSS`,
         },
         {
           type: "FE",
-          href: "https://github.com/Shubham071122/streamify",
+          href: "https://github.com/techshubham7/streamify",
           icon: <Icons.github className="size-3" />,
         },
         {
           type: "BE",
-          href: "https://github.com/Shubham071122/streamify-server",
+          href: "https://github.com/techshubham7/streamify-server",
           icon: <Icons.github className="size-3" />,
         },
       ],
@@ -574,7 +574,7 @@ React, JavaScript, Redux, TailwindCSS, TMDB API`,
         },
         {
           type: "Source",
-          href: "https://github.com/Shubham071122/viewvista",
+          href: "https://github.com/techshubham7/viewvista",
           icon: <Icons.github className="size-3" />,
         },
       ],

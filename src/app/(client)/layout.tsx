@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   twitter: {
     title: `${DATA.name} | Full Stack Developer`,
     card: "summary_large_image",
-    creator: "@ShubhamRawat_7",
+    creator: "@techshubham7",
     description: DATA.description,
     images: [getOgImageUrl()],
   },
