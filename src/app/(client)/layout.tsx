@@ -88,6 +88,13 @@ export default function ClientLayout({
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-KMB4DVNJ');`}
       </Script>
+      {/* Cloudflare Web Analytics */}
+      <Script
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        strategy="afterInteractive"
+        data-cf-beacon='{"token": "276ef81da05b4c81a013165f5cb87286"}'
+      />
+      {/* End Cloudflare Web Analytics */}
       <StructuredData />
       <noscript>
         <iframe
